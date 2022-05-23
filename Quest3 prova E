@@ -1,0 +1,37 @@
+produtos = []   # Abri uma lista para armazenar os produtos indicados pelo usuário 
+while True:     #Utilizei while True para criar um loop
+    opção = int(input('''\n[1] - Cadastrar produto \n[2] - Quantidade \n[3] - Total do capital \n[4] - Encerrar programa
+Escolha sua opção:'''))   #Dentro da variável,tem cada opção que seja exibida ao usuário 
+    if opção == 1:  #Utilizei if para a escolha da primeira opção 
+        p = str(input('Nome do produto: '))   #O usuário irá informar o nome,setor,quantidade e preço do produto
+        nome = '{}'.format(p)
+        p = []
+        setor1 = input('Setor: ')   
+        quantidade = int(input('Quantidade do produto: '))
+        preço = float(input('Preço do produto: '))
+        
+        produto = []   #Adicionei a lista vazia novamente e posteriormente Utilizei a função append para adicionar cada um dos dados dentro da lista 
+        produto.append (nome)
+        produto.append (setor1)
+        produto.append (quantidade)
+        produto.append (preço)
+        produtos.append (produto)
+        print('Produto cadastrado com sucesso!')   #Será imprimido após o cadastro
+
+    if opção == 2:  #Novamente o if para verificar a segunda opção do usuário 
+            s = str(input('Informe o nome do setor: '))   #O usuário irá informar o setor,o programa irá imprimir o nome,quantidade de produto e o capital deste setor 
+            setor = '{}'.format(setor1)
+            s = [s]
+            print(f'No setor {setor1}')
+            print(f'Contém: {quantidade} do mesmo produto')
+            v = preço * quantidade 
+            print(f'O capital destes produtos é : R$ {v}')
+        
+    if opção == 3:  #Novamente o if, por fim será informado o capital dos setores 
+        t = float(input('Preço total dos produtos'))
+        u = int(input('Quantidade de produtos'))
+        total = t * u
+        print('O total do capital é: R$ {}'.format(total))
+    if opção == 4:   #Na última opção o programa será encerrado,utilizei o break no final para quebrar o laço e não se repetir mais! 
+         print('Obrigado! Programa finalizado')
+         break
